@@ -53,31 +53,31 @@ def searchBlocks(x1, y1, z1, x2, y2, z2, blockId):
 
 while True:
     timer = timer + 1;
-    active = [];
-    
-    if readyBool == False and testingBool == False:
-        active = anySmokeDetected();
-    
-    if len(active) > 0: 
-        for sd in active:
-            mc.setBlock(*sd, block.WOOL_RED);
-        
-        ready.stop();
-        test.stop();
-        readyBool = False;
-        testingBool = False;
-        
-        if alarmBool == False:
-            alarmBool = True;
-            alarm.play(-1);
-    else:
-        if alarmBool == True:
-            alarmBool = False;
-            alarm.stop();
-            
-    for sd in smokeDetectors.values():
-        if safe_index(active, sd) == None and mc.getBlockWithData(*sd) == block.WOOL_RED:
-            mc.setBlock(*sd, block.WOOL_WHITE);
+#     active = [];
+#     
+#     if readyBool == False and testingBool == False:
+#         active = anySmokeDetected();
+#     
+#     if len(active) > 0: 
+#         for sd in active:
+#             mc.setBlock(*sd, block.WOOL_RED);
+#         
+#         ready.stop();
+#         test.stop();
+#         readyBool = False;
+#         testingBool = False;
+#         
+#         if alarmBool == False:
+#             alarmBool = True;
+#             alarm.play(-1);
+#     else:
+#         if alarmBool == True:
+#             alarmBool = False;
+#             alarm.stop();
+#             
+#     for sd in smokeDetectors.values():
+#         if safe_index(active, sd) == None and mc.getBlockWithData(*sd) == block.WOOL_RED:
+#             mc.setBlock(*sd, block.WOOL_WHITE);
         
     hits = mc.events.pollBlockHits();
     for hit in hits:

@@ -8,5 +8,5 @@ while True:
 	hits = mc.events.pollBlockHits()
 	for hit in hits:
 		blockId = mc.getBlock(hit.pos.x, hit.pos.y, hit.pos.z);
-		if blockId == block.TNT:mc.setBlock(hit.pos.x, hit.pos.y, hit.pos.z, block.TNT, 1);mc.postToChat('TNT activated');
+		if blockId == 247: mc.setBlock(hit.pos.x, hit.pos.y + 50, hit.pos.z, block.GRAVEL);       
 	sleep(0.1)

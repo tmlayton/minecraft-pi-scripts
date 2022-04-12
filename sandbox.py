@@ -6,7 +6,7 @@ mc = Minecraft.create();
 
 x,y,z = mc.player.getPos();
 
-mc.setBlocks(-126,14,-35, 130,14,-35, block.WOOL_BLACK)
+mc.setBlocks(-127,30,-127, 127,25,127, block.TNT.id, 1)
 
 # while True:
 #     hits = mc.events.pollBlockHits();

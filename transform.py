@@ -11,7 +11,7 @@ def transform(fromId, toId):
             y = hit.pos.y;
             z = hit.pos.z;
             
-            if mc.getBlock(x, y, z) == fromId:
+            if mc.getBlockWithData(x, y, z) == fromId:
                 mc.setBlock(x, y, z, toId);
                         
         sleep(0.1)
